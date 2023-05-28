@@ -16,7 +16,7 @@ if Month_of_birth < 0:
 elif Month_of_birth > 12:
     print("Ошибка: месяц не может быть больше 12")
 
-if  Year - Year_of_birth - ((Month, Day) < (Month_of_birth, Day_of_birth)) < 18:
+if Year - Year_of_birth - ((Month, Day) < (Month_of_birth, Day_of_birth)) < 18:
     print("Ошибка: тебе нет 18 лет")
 else:
     print("Вход выполнен!")
