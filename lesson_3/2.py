@@ -1,34 +1,49 @@
 HttpCode = int(input("Введите http-код: "))
-match HttpCode:
-    case (100):
+
+code1xx = HttpCode
+code2xx = HttpCode
+code3xx = HttpCode
+code4xx = HttpCode
+code5xx = HttpCode
+
+match code1xx:
+    case 100:
         print("Continue")
-    case (102):
+    case 102:
         print("Processing")
-    case ("103"):
-        print("Early Hints")
-    case (200):
-        print("Continue")
-    case (204):
-        print("Processing")
-    case (302):
+    case "103":
+        print("Early Hints")    
+    case _:
+        print("Неизвестный код для группы 1xx")
+            
+match code2xx:
+    case 200:
+        print("OK")
+    case 204:
+        print("No Content")
+    case _:
+        print("Неизвестный код для группы 2xx")
+
+match code3xx:
+    case 302:
         print("Found")
-    case (305):
+    case 305:
         print("Use Proxy")
-    case (404):
+    case _:
+        print("Неизвестный код для группы 3xx")
+            
+match code4xx:
+    case 404:
         print("Not Found")
-    case (409):
+    case 409:
         print("Conflict")
-    case (503):
+    case _:
+        print("Неизвестный код для группы 4xx")
+            
+match code5xx:
+    case 503:
         print("Service Unavailable")
-    case (510):
+    case 510:
         print("Not Extended")
-if HttpCode > 103:
-    print("Неизвестный код для группы 1xx")
-if HttpCode > 207:
-    print("Неизвестный код для группы 2xx")
-if HttpCode > 308:
-    print("Неизвестный код для группы 3xx")
-if HttpCode > 499:
-    print("Неизвестный код для группы 4xx")
-if HttpCode > 599:
-    print("Неизвестный код для группы 5xx")
+    case _:
+        print("Неизвестный код для группы 5xx")
