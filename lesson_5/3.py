@@ -4,7 +4,7 @@ def sum_fib(n):
     s = 0
     while c < n:
         s += c
-        c, p = c + p, c
+        c, p = p, c + p
     return s
- 
-print(sum_fib(int(input('Введите число: '))))
+       
+print(sum_fib(int(input("Введите число: "))))    
