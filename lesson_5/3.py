@@ -1,10 +1,11 @@
-def sum_fib(n):
-    c = 1
-    p = 0
+def fib_sum(n):
     s = 0
-    while c < n:
-        s += c
-        c, p = p, c + p
+    a, b = 0, 1
+    i = 0
+    while i < n:
+        s += b
+        a, b = b, a + b
+        i += 1
     return s
-       
-print(sum_fib(int(input("Введите число: "))))    
+
+print(fib_sum(int(input("Количество фибоначчи: "))))
