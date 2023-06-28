@@ -9,5 +9,5 @@ for i in range(10):
 print(3)
 i = 0
 while i < 10:
-    print("Hello, world", end ' ')
+    print("Hello, world")
     i += 1
